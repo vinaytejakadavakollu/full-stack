@@ -1,0 +1,33 @@
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand">&nbsp;&nbsp;Beyond</h1>
+    <div class="col-md-3"></div>
+   <div class="collpase navbar-collpase" id="mynav">
+    <ul class="navbar-nav ">
+        <li class="nav-item"><a routerLink="/home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+            <a routerLink="/products" class="nav-link dropdown-toggler" data-bs-toggle="dropdown">Books
+
+                <ul class="dropdown-menu  bg-dark ">
+                    <li class="dropdown-item"><a routerLink="/action" class="dropdown-link">Action</a></li>
+                    <li class="dropdown-item"><a routerLink="/rom" class="dropdown-link">Romance</a></li>
+                    <li class="dropdown-item"><a routerLink="/horror" class="dropdown-link">Horror</a></li>
+                </ul>
+
+        </a></li>
+        <li *ngIf="admin" class="nav-item"><a routerLink="/addproduct" class="nav-link">AddProduct</a></li>
+        <li *ngIf="!admin" class="nav-item"><a routerLink="/addtocart" class="nav-link">Cart</a></li>
+        <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a routerLink=" " class="nav-link" (click)="logout()">Logout</a></li>
+
+</ul>
+</div>
+<div class="col-md-2"></div>
+ <div class="d-flex justify-content-end">
+    <h4 class="text-light">Welcome {{username}}</h4>
+ </div>
+</nav>
+
